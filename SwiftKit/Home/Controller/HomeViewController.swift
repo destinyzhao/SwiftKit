@@ -19,7 +19,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
         // Do any additional setup after loading the view.
         
-        dataArray = ["AlertViewDemo","ActionSheetDemo","页面传值-Delegate","页面传值-Closure"]
+        dataArray = ["AlertViewDemo","ActionSheetDemo","页面传值-Delegate","页面传值-Closure","自定义导航返回按钮"]
         
         print("HomeViewController viewDidLoad")
     }
@@ -61,6 +61,9 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         else if (indexPath.row == 3){
             // Segue跳转
             self.performSegueWithIdentifier("DetailVC", sender: nil)
+        }
+        else if (indexPath.row == 4){
+            self.performSegueWithIdentifier("customNavBackBtnVC", sender: nil)
         }
 
     }

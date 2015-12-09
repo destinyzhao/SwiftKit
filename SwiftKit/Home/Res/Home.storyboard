@@ -38,11 +38,31 @@
                     <connections>
                         <outlet property="tableView" destination="LFF-ac-GYt" id="6rO-er-gCt"/>
                         <segue destination="ldk-b7-wFu" kind="show" identifier="DetailVC" id="dyt-uI-esu"/>
+                        <segue destination="ecl-ts-56N" kind="show" identifier="customNavBackBtnVC" id="TRc-GQ-30a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHz-aA-gj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1178" y="586"/>
+        </scene>
+        <!--自定义导航返回按钮-->
+        <scene sceneID="qag-d8-ykg">
+            <objects>
+                <viewController id="ecl-ts-56N" customClass="CustomNavBackBtnViewController" customModule="SwiftKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vR9-Rw-HbM"/>
+                        <viewControllerLayoutGuide type="bottom" id="wcB-JA-oYk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="geg-Cp-Wxi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="自定义导航返回按钮" id="NAD-jr-zYh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8bY-sx-AOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="1348"/>
         </scene>
         <!--页面传值-->
         <scene sceneID="Vdh-V8-SCb">
@@ -109,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="1779" y="586"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Custom Navigation-->
         <scene sceneID="ISx-QW-S7C">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4ha-s4-mV2" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4ha-s4-mV2" customClass="CustomNavigation" customModule="SwiftKit" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bJu-vx-mWw">
@@ -126,7 +146,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iui-D6-KDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="431" y="586"/>
+            <point key="canvasLocation" x="689" y="586"/>
         </scene>
     </scenes>
 </document>
