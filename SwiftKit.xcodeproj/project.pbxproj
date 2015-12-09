@@ -25,6 +25,8 @@
 		FA20C6981C167F9C00AA5764 /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20C6971C167F9C00AA5764 /* ClassViewController.swift */; };
 		FA20C69A1C167FCC00AA5764 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20C6991C167FCC00AA5764 /* PersonalViewController.swift */; };
 		FA20C69C1C167FE100AA5764 /* ShopingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20C69B1C167FE100AA5764 /* ShopingViewController.swift */; };
+		FA20C69E1C16D8D900AA5764 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20C69D1C16D8D900AA5764 /* HomeDetailViewController.swift */; };
+		FA20C6A11C17DC7B00AA5764 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20C6A01C17DC7B00AA5764 /* AlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		FA20C6971C167F9C00AA5764 /* ClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
 		FA20C6991C167FCC00AA5764 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		FA20C69B1C167FE100AA5764 /* ShopingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopingViewController.swift; sourceTree = "<group>"; };
+		FA20C69D1C16D8D900AA5764 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
+		FA20C6A01C17DC7B00AA5764 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 		FA20C6341C15774100AA5764 /* SwiftKit */ = {
 			isa = PBXGroup;
 			children = (
+				FA20C69F1C17DC4F00AA5764 /* View */,
 				FA20C68D1C1679A300AA5764 /* Base */,
 				FA20C6631C16772900AA5764 /* Brand */,
 				FA20C6641C16772900AA5764 /* Class */,
@@ -253,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				FA20C6931C167F6F00AA5764 /* HomeViewController.swift */,
+				FA20C69D1C16D8D900AA5764 /* HomeDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -332,6 +338,14 @@
 				FA20C6911C167A0500AA5764 /* CustomTabBar.swift */,
 			);
 			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		FA20C69F1C17DC4F00AA5764 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA20C6A01C17DC7B00AA5764 /* AlertView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,7 +487,9 @@
 				FA20C6981C167F9C00AA5764 /* ClassViewController.swift in Sources */,
 				FA20C69A1C167FCC00AA5764 /* PersonalViewController.swift in Sources */,
 				FA20C6961C167F8D00AA5764 /* BrandViewController.swift in Sources */,
+				FA20C69E1C16D8D900AA5764 /* HomeDetailViewController.swift in Sources */,
 				FA20C6941C167F6F00AA5764 /* HomeViewController.swift in Sources */,
+				FA20C6A11C17DC7B00AA5764 /* AlertView.swift in Sources */,
 				FA20C6921C167A0500AA5764 /* CustomTabBar.swift in Sources */,
 				FA20C69C1C167FE100AA5764 /* ShopingViewController.swift in Sources */,
 				FA20C6381C15774100AA5764 /* ViewController.swift in Sources */,

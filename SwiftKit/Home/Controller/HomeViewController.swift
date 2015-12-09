@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,HomeDetialDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var dataArray = []
@@ -19,7 +19,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
         // Do any additional setup after loading the view.
         
-        dataArray = ["AlertViewDemo","ActionSheetDemo"]
+        dataArray = ["AlertViewDemo","ActionSheetDemo","页面传值-Delegate","页面传值-Closure"]
         
         print("HomeViewController viewDidLoad")
     }
@@ -51,6 +51,28 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         else if(indexPath.row == 1){
             showAlertView(1)
         }
+        else if(indexPath.row == 2){
+            // 代码跳转
+            let viewController:HomeDetailViewController = UIStoryboard(name: "Home", bundle: nil)
+                .instantiateViewControllerWithIdentifier("HomeDetailVC") as! HomeDetailViewController
+            viewController.delegate = self
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+        else if (indexPath.row == 3){
+            // Segue跳转
+            self.performSegueWithIdentifier("DetailVC", sender: nil)
+        }
+
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "DetailVC"{
+            let homeDetialVC = segue.destinationViewController as! HomeDetailViewController
+            homeDetialVC.Index = 2
+            homeDetialVC.initWithClosure{ message in
+               self.showAlert(message)
+            }
+        }
     }
     
     /**
@@ -77,6 +99,26 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         alertController.addAction(cancelAction)
         self.presentViewController(alertController, animated: true, completion: nil)
     }
+    
+
+    func showAlert(message:String){
+        let alert = UIAlertController(title: "系统提示", message:message , preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "确定", style: .Default) { (action) -> Void in
+            
+        }
+        alert.addAction(okAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    /**
+     委托传值
+     
+     - parameter value:
+     */
+    func passVauleFromHomeDetailVC(value: String) {
+       showAlert(value)
+    }
+    
     /*
     // MARK: - Navigation
 
