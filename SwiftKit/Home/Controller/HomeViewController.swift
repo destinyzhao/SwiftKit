@@ -56,6 +56,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             let viewController:HomeDetailViewController = UIStoryboard(name: "Home", bundle: nil)
                 .instantiateViewControllerWithIdentifier("HomeDetailVC") as! HomeDetailViewController
             viewController.delegate = self
+            viewController.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(viewController, animated: true)
         }
         else if (indexPath.row == 3){
@@ -69,9 +70,13 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // 影藏TabBar
+        segue.destinationViewController.hidesBottomBarWhenPushed = true
+        
         if segue.identifier == "DetailVC"{
             let homeDetialVC = segue.destinationViewController as! HomeDetailViewController
             homeDetialVC.Index = 2
+            // 闭包回传值
             homeDetialVC.initWithClosure{ message in
                self.showAlert(message)
             }

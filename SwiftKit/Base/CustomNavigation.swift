@@ -43,6 +43,7 @@ class CustomNavigation: UINavigationController,UINavigationControllerDelegate,UI
         if(interactivePopGestureRecognizer != nil){
             self.interactivePopGestureRecognizer?.enabled = true
         }
+        
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailByGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
